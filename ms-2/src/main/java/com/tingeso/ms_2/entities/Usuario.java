@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "usuario")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,7 +25,6 @@ public class Usuario{
     private int salario;
     private int deudaTotal;
     private String nombreArchivo;
-    @Getter
     @Lob
     private String documento;
 }
