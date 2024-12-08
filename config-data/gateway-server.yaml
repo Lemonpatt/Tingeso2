@@ -18,16 +18,23 @@ spring:
           - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
       globalcors:
         cors-configurations:
-          '[/**]':
-            allowedOrigins: '*'
-            allowedMethods: "*"
-            allowedHeaders: "*"
+          '[/**]': # Patrón de ruta global
+            allowedOrigins:
+              - http://localhost:5173
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
       routes:
         - id: ms-1
           uri: lb://ms-1
           predicates:
-            - Path=/simulacion/**
+            - Path=/api/v1/simulacion/**
         - id: ms-2
           uri: lb://ms-2
           predicates:
-            - Path=/usuario/**
+            - Path=/api/v1/usuario/**
