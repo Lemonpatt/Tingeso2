@@ -36,12 +36,6 @@ public class SolicitudController {
         return ResponseEntity.ok(solicitudes);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Solicitud> getSolicitudById(@PathVariable Long id) {
-        Solicitud solicitud = solicitudService.getSolicitudPrestamoById(id);
-        return ResponseEntity.ok(solicitud);
-    }
-
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminarSolicitud(@PathVariable Long id) {
 

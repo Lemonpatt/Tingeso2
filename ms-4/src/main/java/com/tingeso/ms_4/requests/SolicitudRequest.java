@@ -24,11 +24,19 @@ public class SolicitudRequest {
 
     private double interes;
 
+    private double seguroDegravamen;
+
+    private int seguroIncendio;
+
+    private double comision;
+
     private double financiamiento;
 
     private double cuotaMensual;
 
+
     private List<Double> ingresosMensuales;
+
 
     private List<Double> deudasMensuales;
 
@@ -37,13 +45,16 @@ public class SolicitudRequest {
     public SolicitudRequest() {
     }
 
-    public SolicitudRequest(int valorPropiedad, String tipoPrestamo, int antiguedadTrabajo, String tipoTrabajo, int plazo, double interes, double financiamiento, double cuotaMensual, List<Double> ingresosMensuales, List<Double> deudasMensuales, Long usuario) {
+    public SolicitudRequest(int valorPropiedad, String tipoPrestamo, int antiguedadTrabajo, String tipoTrabajo, int plazo, double interes, double seguroDegravamen, int seguroIncendio, double comision, double financiamiento, double cuotaMensual, List<Double> ingresosMensuales, List<Double> deudasMensuales, Long usuario) {
         this.valorPropiedad = valorPropiedad;
         this.tipoPrestamo = tipoPrestamo;
         this.antiguedadTrabajo = antiguedadTrabajo;
         this.tipoTrabajo = tipoTrabajo;
         this.plazo = plazo;
         this.interes = interes;
+        this.seguroDegravamen = seguroDegravamen;
+        this.seguroIncendio = seguroIncendio;
+        this.comision = comision;
         this.financiamiento = financiamiento;
         this.cuotaMensual = cuotaMensual;
         this.ingresosMensuales = ingresosMensuales;
@@ -97,6 +108,30 @@ public class SolicitudRequest {
 
     public void setInteres(double interes) {
         this.interes = interes;
+    }
+
+    public double getSeguroDegravamen() {
+        return seguroDegravamen;
+    }
+
+    public void setSeguroDegravamen(double seguroDegravamen) {
+        this.seguroDegravamen = seguroDegravamen;
+    }
+
+    public int getSeguroIncendio() {
+        return seguroIncendio;
+    }
+
+    public void setSeguroIncendio(int seguroIncendio) {
+        this.seguroIncendio = seguroIncendio;
+    }
+
+    public double getComision() {
+        return comision;
+    }
+
+    public void setComision(double comision) {
+        this.comision = comision;
     }
 
     public double getFinanciamiento() {

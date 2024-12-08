@@ -44,3 +44,7 @@ spring:
           uri: lb://ms-4
           predicates:
             - Path=/api/v1/evaluacion/**
+        - id: ms-5
+          uri: lb://ms-5
+          predicates:
+            - Path=/api/v1/seguimiento/**

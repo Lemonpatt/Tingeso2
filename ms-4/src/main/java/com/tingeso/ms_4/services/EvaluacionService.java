@@ -161,4 +161,28 @@ public class EvaluacionService {
 
         return resultados;
     }
+
+
+    //Funcionalidad de M6 Añadida en Evaluación de Solicitud
+    public List<String> TotalCostCredit(SolicitudRequest request) {
+        List<String> mensajes = new ArrayList<>();
+        double cuotaPrestamo;
+        double montoPrestamo;
+
+        cuotaPrestamo = request.getCuotaMensual();
+        montoPrestamo = (double) request.getValorPropiedad() * request.getFinanciamiento() / 100;
+
+        double comisionAdmin = montoPrestamo * request.getComision() / 100;
+        double desgravamen = montoPrestamo * request.getSeguroDegravamen() / 100;
+
+        double cuotaMensualNueva = cuotaPrestamo + desgravamen + request.getSeguroIncendio();
+
+        int costoTotal = (int) (cuotaMensualNueva * request.getPlazo() * 12 + comisionAdmin);
+
+        mensajes.add("Calculando los valores del préstamo queda lo siguiente:");
+        mensajes.add("Seguro de degravamen: $" + desgravamen + " Mensuales");
+        mensajes.add("Costo de comisión por Administración: $" + comisionAdmin + " Monto único añadido al total");
+        mensajes.add("El costo total del préstamo quedará en $" + costoTotal + ", mientras que el valor de la cuota será $" + cuotaMensualNueva + ".");
+        return mensajes;
+    }
 }

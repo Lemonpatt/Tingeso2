@@ -121,4 +121,5 @@ public class Usuario{
     public void setAntiguedadCuenta(int antiguedadCuenta) {
         this.antiguedadCuenta = antiguedadCuenta;
     }
+
 }

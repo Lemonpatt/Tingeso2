@@ -25,9 +25,7 @@ public class SolicitudService {
     public Solicitud updateSolicitud(Solicitud solicitud) {
         return solicitudRepository.save(solicitud);
     }
-    public Solicitud getSolicitudPrestamoById(Long id) {
-        return solicitudRepository.findById(id).orElse(null);
-    }
+
     public void deleteSolicitud(Long id) {
 
         solicitudRepository.deleteById(id);

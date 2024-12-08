@@ -22,4 +22,10 @@ public class EvaluacionController {
         List<String> resultados = evaluacionService.cumpleRequisitos(solicitudPrestamo);
         return ResponseEntity.ok(resultados);
     }
+
+    @PostMapping("/costo-total")
+    public ResponseEntity<List<String>> evaluarCostoTotal(@RequestBody SolicitudRequest solicitudPrestamo) {
+        List<String> resultado = evaluacionService.TotalCostCredit(solicitudPrestamo);
+        return ResponseEntity.ok(resultado);
+    }
 }

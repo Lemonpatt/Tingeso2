@@ -16,7 +16,7 @@ public class  Solicitud {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public Solicitud(Long id, String correo, String telefono, int valorPropiedad, List<String> nombreArchivos, List<String> documentos, String tipoPrestamo, int antiguedadTrabajo, String tipoTrabajo, int plazo, double interes, double seguroDegravamen, int seguroIncendio, double comision, double financiamiento, double cuotaMensual, List<Double> ingresosMensuales, List<Double> deudasMensuales, String estado, Long usuario) {
+    public Solicitud(Long id, String correo, String telefono, int valorPropiedad, List<String> nombreArchivos, List<String> documentos, String tipoPrestamo, int antiguedadTrabajo, String tipoTrabajo, int plazo, double interes, double seguroDegravamen, int seguroIncendio, double comision, double financiamiento, double cuotaMensual, List<Double> ingresosMensuales, List<Double> deudasMensuales, String estado, long usuario) {
         this.id = id;
         this.correo = correo;
         this.telefono = telefono;
@@ -89,7 +89,7 @@ public class  Solicitud {
     private List<Double> deudasMensuales = new ArrayList<>(Collections.nCopies(12, 0.0));
 
     private String estado;
-    private Long usuario;
+    private long usuario;
 
     public Long getId() {
         return id;
@@ -243,11 +243,11 @@ public class  Solicitud {
         this.estado = estado;
     }
 
-    public Long getUsuario() {
+    public long getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(Long usuario) {
+    public void setUsuario(long usuario) {
         this.usuario = usuario;
     }
 }
