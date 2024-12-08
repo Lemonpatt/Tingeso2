@@ -2,7 +2,7 @@ server:
   port: 8091
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/ms2-db
+    url: jdbc:postgresql://localhost:5432/ms2-db
     username: postgres
     password: 123
 eureka:
