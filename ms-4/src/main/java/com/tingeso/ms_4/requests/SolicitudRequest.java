@@ -1,12 +1,5 @@
 package com.tingeso.ms_4.requests;
 
-import jakarta.persistence.CollectionTable;
-import jakarta.persistence.Column;
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.JoinColumn;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class SolicitudRequest {
